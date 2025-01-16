@@ -1,12 +1,16 @@
--- CREATE TABLE dex (
+-- CREATE TABLE dex_local (
 --     id INTEGER PRIMARY KEY AUTOINCREMENT,
---     pokeEspecie TEXT NOT NULL
+--     species TEXT NOT NULL,
+--        tipo1 TEXT,
+--        tipo2 TEXT,
+--        description TEXT,
+--        height INTEGER,
+--        weight INTEGER,
+--        category TEXT,
+--        ability TEXT
 -- );
 
--- ALTER TABLE dex ADD COLUMN tipo1 TEXT NOT NULL;
--- ALTER TABLE dex ADD COLUMN tipo2 TEXT;
--- ALTER TABLE dex ADD COLUMN nivel INTEGER NOT NULL;
--- ALTER TABLE dex ADD COLUMN shiny BOOLEAN NOT NULL;
+-- DROP TABLE dex
 
  
 -- ALTER TABlE dex DROP COLUMN regiao;
