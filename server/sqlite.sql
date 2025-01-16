@@ -1,4 +1,4 @@
--- CREATE TABLE dex_local (
+-- CREATE TABLE pokemon_db(
 --     id INTEGER PRIMARY KEY AUTOINCREMENT,
 --     species TEXT NOT NULL,
 --        tipo1 TEXT,
