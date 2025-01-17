@@ -22,8 +22,8 @@ Criar uma aplicação simples e funcional para simular um sistema de troca de Po
 - Ambiente de desenvolvimento: VSCode
 
 ## Como Funciona?
-2. **Clientes**: Cada jogador executa o cliente/servidor em seu computador, conectando-se entre si pelo IP e porta fornecidos.
-3. **Trocas**: Os jogadores podem listar Pokémon, escolher parceiros de troca e concluir as transações.
+1. **Clientes**: Cada jogador executa o cliente/servidor em seu computador, conectando-se entre si pelo IP e porta fornecidos.
+2. **Trocas**: Os jogadores podem listar Pokémon, escolher parceiros de troca e concluir as transações.
 
 ## Contribuidores
 - Caio Merçon
