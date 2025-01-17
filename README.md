@@ -26,6 +26,6 @@ Criar uma aplicação simples e funcional para simular um sistema de troca de Po
 3. **Trocas**: Os jogadores podem listar Pokémon, escolher parceiros de troca e concluir as transações.
 
 ## Contribuidores
-Caio Merçon
-Marcelo Rodrigues
-Pedro Daniel Bomtempo Medeiros
+- Caio Merçon
+- Marcelo Rodrigues
+- Pedro Daniel Bomtempo Medeiros
