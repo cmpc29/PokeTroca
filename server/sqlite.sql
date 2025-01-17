@@ -1,5 +1,5 @@
 -- CREATE TABLE pokemon_db(
---     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     dexID INTEGER PRIMARY KEY,
 --     species TEXT NOT NULL,
 --        tipo1 TEXT,
 --        tipo2 TEXT,
@@ -14,8 +14,8 @@
 
  
 -- ALTER TABlE dex DROP COLUMN regiao;
--- INSERT INTO dex (pokeEspecie,tipo1,nivel,shiny)
--- VALUES ('pidgey','voador',12,'True');
+-- INSERT INTO pokemon_db (species)
+-- VALUES ('Pikachu');
 -- DELETE FROM dex WHERE pokeEspecie='pidgey';
 -- SELECT * FROM dex;
 

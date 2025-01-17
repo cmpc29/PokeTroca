@@ -1,8 +1,14 @@
 import sqlite3
-from functions import catch
+# from functions import catch
+import myServer
 
-connect = sqlite3.connect("Pokedex.db")
+connect = sqlite3.connect("pokedb.db")
 cursor = connect.cursor()
+
+
+myServer()
+
+
 
 class Pokemon:
     def __init__(self,species,type1=None,type2=None,description=None,height=None,weight=None,category=None,ability=None):
@@ -18,6 +24,3 @@ class Pokemon:
 name=input().upper()
 name=name[0].upper()+name[1:].lower()
 pokemon=Pokemon(name)
-
-catch(pokemon)
-
