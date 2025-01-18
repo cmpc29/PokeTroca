@@ -48,7 +48,7 @@ def getPokeData(pokemon_info,pokemon_info2):
     return lista_retorno
 
 
-def inser_in_db(pokeData):
+def insert_in_db(pokeData):
     
     if len(pokeData[2])==2:
         query="INSERT INTO test (dexID,species,tipo1,tipo2,description,height,weight,category,ability) VALUES ('"
@@ -100,5 +100,5 @@ for _ in range(152,253):
         
 
     pokeData=getPokeData(pokemon_info,pokemon_info2)
-    cursor.execute(inser_in_db(pokeData))
+    cursor.execute(insert_in_db(pokeData))
     connect.commit()
