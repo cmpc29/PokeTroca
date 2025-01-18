@@ -18,22 +18,22 @@ def execute():
     while state:
         conexao , endereco = server.accept() #acho que não precisa estar dentro do while
         print(f"Conexão estabelecida com {endereco}")
-
+        
         nome_pokemon = conexao.recv(1024).decode() #recebe o nome do pokemon com a primeira letra maiuscula - tratado no client
-        print(f"Treinador capturou um {nome_pokemon} e deseja informações")
 
         quitWords=["quit","exit","end","terminate"]
         if (nome_pokemon in quitWords):
             conexao.close()
             break
 
+        print(f"Treinador capturou um {nome_pokemon} e deseja informações")
+
+
         pokemon=take_from_db(nome_pokemon)
         if (pokemon):
             conexao.send(pokemon.encode())
+            
         else:
             errorNoPokemon="Isso não é o nome de nenhum Pokemon"
             conexao.send(errorNoPokemon.encode())
-
-    
-    
-#eu ainda nao vou usar as funç~eos do banco de dados, vou usar estatico ´pra ver se funciona, depois a gente muda
+            
