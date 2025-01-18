@@ -1,23 +1,29 @@
-import sqlite3
-from functions import catch
+from functions import catch,check_all_dex,check_dex
 
-connect = sqlite3.connect("Pokedex.db")
-cursor = connect.cursor()
 
-class Pokemon:
-    def __init__(self,species,type1=None,type2=None,description=None,height=None,weight=None,category=None,ability=None):
-        self.species=species
-        self.type1=type1
-        self.type2=type2
-        self.description=description
-        self.height=height
-        self.weight=weight
-        self.category=category
-        self.ability=ability
-
-name=input().upper()
-name=name[0].upper()+name[1:].lower()
-pokemon=Pokemon(name)
-
-catch(pokemon)
-
+while True:
+    pokemon_name=input().title()
+    pokeData=catch(pokemon_name)
+    if (pokeData):
+        for i,j in enumerate(pokeData):
+            match(i):
+                case 0:
+                    continue
+                case 1:
+                    print(f"DexID: {j}")
+                case 2:
+                    print(f"Species name: {j}")
+                case 3:
+                    print(f"Primary Type: {j}")
+                case 4:
+                    print(f"Secondary Type: {j}")
+                case 5:
+                    print(f"Category: {j}")
+                case 6:
+                    print(f"Height: {j} m")
+                case 7:
+                    print(f"Weight: {j} kg")
+                case 8:
+                    print(f"Description: {j}")
+                case 9:
+                    print(f"Ability: {j}")
