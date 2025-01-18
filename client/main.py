@@ -1,4 +1,4 @@
-from functions import catch,check_all_dex,check_dex
+from functions import catch
 
 
 while True:
