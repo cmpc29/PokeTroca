@@ -13,7 +13,6 @@ server.listen()
 def handle_client(conexao, endereco):
     """Função que lida com a comunicação com cada cliente"""
     try:
-
         quitWords = ["end"]
         
         while True:
@@ -55,4 +54,5 @@ def execute():
             client_thread.start()
         except socket.timeout:
             print("Tempo de espera expirado, aguardando novas conexões...")
+            break
 
