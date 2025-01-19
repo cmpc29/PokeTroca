@@ -9,7 +9,7 @@ PORT = 1025
 client= socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET é o protocolo de endereçamento de IP, SOCK_STREAM é o protocolo de transporte TCP!!!
 
 def execute_catch():
-    pokemon_name=input().title()
+    pokemon_name=input("Digite o nome do Pokemon que você quer tentar capturar:").title()
     if (pokemon_name=="End"):
         client.close()
         print("Conexão fechada.")
@@ -37,7 +37,7 @@ def execute_catch():
                     case 8:
                         print(f"Description: {j}")
                     case 9:
-                        print(f"Ability: {j}")
+                        print(f"Ability: {j}\n")
                     
 def catch(pokemon_name): 
     from functions import register_dex
@@ -55,7 +55,6 @@ def client_function(pokemon):
         print("Conexão com a Dex Nacional previamente estabelecida.")
         client.send(pokemon.encode()) #encode transforma a string em bytes, qualquer coisa só mudar. Formato enviado: Pikachu
         data = client.recv(1024) #1024 é o tamanho do buffer de recebimento.
-        print(data.decode())
         if ("(" in data.decode()):
             return(eval(data.decode()))
         return(False)
@@ -64,7 +63,6 @@ def client_function(pokemon):
         print("Conectado a Dex Nacional.")
         client.send(pokemon.encode()) #encode transforma a string em bytes, qualquer coisa só mudar. Formato enviado: Pikachu
         data = client.recv(1024) #1024 é o tamanho do buffer de recebimento.
-        print(data.decode())
         if ("(" in data.decode()):
             return(eval(data.decode()))
         return(False)

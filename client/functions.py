@@ -21,14 +21,14 @@ def register_dex(pokemon_name):
     pokeData=cursor.fetchone()
 
     if (pokeData): 
-        print ("Known Pokemon:")
+        print ("\nKnown Pokemon:")
         return(pokeData)
 
     else:
         pokemon=client_function(pokemon_name) #acessa a dex nacional e retorna o pokemon ou nao
         if (pokemon):
             insert_in_db(pokemon)
-            print ("New Pokemon added!")
+            print ("\nNew Pokemon added!\n")
             cursor.execute(query)
             pokeData=cursor.fetchone()
             return(pokeData)
@@ -56,7 +56,6 @@ def insert_in_db(pokemon):
                 else:
                     query+=str(pokeData)+"','"
         query+="');"
-    print(query)
     cursor.execute(query)
     connect.commit()
 
@@ -72,7 +71,29 @@ def check_dex(pokemon_name):
     query="SELECT * FROM test WHERE species='"+pokemon_name.title()+"';"
     cursor.execute(query)
     pokeData=cursor.fetchone()
+    print()
     if (pokeData):
-        print (*pokeData,sep="\n")
+            for i,j in enumerate(pokeData):
+                match(i):
+                    case 0:
+                        continue
+                    case 1:
+                        print(f"DexID: {j}")
+                    case 2:
+                        print(f"Species name: {j}")
+                    case 3:
+                        print(f"Primary Type: {j}")
+                    case 4:
+                        print(f"Secondary Type: {j}")
+                    case 5:
+                        print(f"Category: {j}")
+                    case 6:
+                        print(f"Height: {j} m")
+                    case 7:
+                        print(f"Weight: {j} kg")
+                    case 8:
+                        print(f"Description: {j}")
+                    case 9:
+                        print(f"Ability: {j}\n")
     else:
         print("Pokemon ainda desconhecido ou inexistente.")
