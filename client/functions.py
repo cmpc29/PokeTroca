@@ -1,6 +1,6 @@
 import random
 import sqlite3
-from myClient import myClient
+from myClient import client_function
 
 connect = sqlite3.connect("pokedex.db")
 cursor = connect.cursor()
@@ -8,7 +8,7 @@ cursor = connect.cursor()
 
 def catch(pokemon_name): 
     chance=random.randint(1,3)
-    if (chance==3):
+    if (chance): #MODIFICAR PARA ENTREGA
         print("Catched!")
         return register_dex(pokemon_name)
     else:
@@ -21,11 +21,11 @@ def register_dex(pokemon_name):
     pokeData=cursor.fetchone()
 
     if (pokeData): 
-        print ("Known Pokemon:\n")
+        print ("Known Pokemon:")
         return(pokeData)
 
     else:
-        pokemon=myClient(pokemon_name) #acessa a dex nacional e retorna o pokemon ou nao
+        pokemon=client_function(pokemon_name) #acessa a dex nacional e retorna o pokemon ou nao
         if (pokemon):
             insert_in_db(pokemon)
             print ("New Pokemon added!")
@@ -56,6 +56,7 @@ def insert_in_db(pokemon):
                 else:
                     query+=str(pokeData)+"','"
         query+="');"
+    print(query)
     cursor.execute(query)
     connect.commit()
 
@@ -74,4 +75,4 @@ def check_dex(pokemon_name):
     if (pokeData):
         print (*pokeData,sep="\n")
     else:
-        print("Pokemon ainda desconhecido")
+        print("Pokemon ainda desconhecido ou inexistente.")

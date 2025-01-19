@@ -1,14 +1,14 @@
-CREATE TABLE test(
-    dexID INTEGER PRIMARY KEY,
-    species TEXT NOT NULL,
-       tipo1 TEXT,
-       tipo2 TEXT,
-       category TEXT,
-       height INTEGER,
-       weight INTEGER,
-       description TEXT,
-       ability TEXT
-);
+-- CREATE TABLE test(
+--     dexID INTEGER PRIMARY KEY,
+--     species TEXT NOT NULL,
+--        tipo1 TEXT,
+--        tipo2 TEXT,
+--        category TEXT,
+--        height INTEGER,
+--        weight INTEGER,
+--        description TEXT,
+--        ability TEXT
+-- );
 
 -- DROP TABLE dex
 
@@ -17,5 +17,5 @@ CREATE TABLE test(
 -- INSERT INTO pokemon_db (species)
 -- VALUES ('Pikachu');
 -- DELETE FROM dex WHERE pokeEspecie='pidgey';
--- SELECT * FROM dex;
+SELECT * FROM test;
 

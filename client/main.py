@@ -1,29 +1,18 @@
-from functions import catch
+from myClient import *
+from functions import check_dex,check_all_dex
+
 
 
 while True:
-    pokemon_name=input().title()
-    pokeData=catch(pokemon_name)
-    if (pokeData):
-        for i,j in enumerate(pokeData):
-            match(i):
-                case 0:
-                    continue
-                case 1:
-                    print(f"DexID: {j}")
-                case 2:
-                    print(f"Species name: {j}")
-                case 3:
-                    print(f"Primary Type: {j}")
-                case 4:
-                    print(f"Secondary Type: {j}")
-                case 5:
-                    print(f"Category: {j}")
-                case 6:
-                    print(f"Height: {j} m")
-                case 7:
-                    print(f"Weight: {j} kg")
-                case 8:
-                    print(f"Description: {j}")
-                case 9:
-                    print(f"Ability: {j}")
+    option=input("Selecione uma opção:\n0:Pegar um Pokemon.\n1:Olhar a Dex de um Pokemon.\n2:Olhar a Dex completa.\nEnd:Finalizar a execução\n").title()
+    match(option):
+        case "0":
+            execute_catch()
+        case "1":
+            pokemon_name=input("Digite o nome de um Pokemon.\n")
+            check_dex(pokemon_name)
+        case "2":
+            check_all_dex()
+        case "End":
+            print("Finalizando a execução.")
+            break

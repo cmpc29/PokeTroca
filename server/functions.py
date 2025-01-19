@@ -1,6 +1,6 @@
 import sqlite3
 
-connect = sqlite3.connect("pokedb.db")
+connect = sqlite3.connect("pokedb.db",check_same_thread=False)
 cursor = connect.cursor()
 
 
