@@ -12,7 +12,7 @@ def take_from_db(nome_pokemon):
 
 def read_from_db(nome_pokemon):
   
-    query="SELECT * FROM test WHERE species= '"+nome_pokemon+"';"
+    query="SELECT * FROM pokedex_nacional WHERE species= '"+nome_pokemon+"';"
     cursor.execute(query)
     result=cursor.fetchone()
     return (result)

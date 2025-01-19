@@ -1,7 +1,7 @@
 import random
 import socket
 
-# from functions import register_dex as test
+
 
 
 HOST = "25.54.201.178" #COLOQUE O IP DO SERVIDOR AQUI!!!

@@ -16,7 +16,7 @@ def catch(pokemon_name):
 
 
 def register_dex(pokemon_name):
-    query="SELECT * FROM test WHERE species='"+pokemon_name+"';"
+    query="SELECT * FROM pokedex WHERE species='"+pokemon_name+"';"
     cursor.execute(query)
     pokeData=cursor.fetchone()
 
@@ -38,7 +38,7 @@ def register_dex(pokemon_name):
 
 def insert_in_db(pokemon):
     if (pokemon[3]): #2tipos
-        query="INSERT INTO test (dexID,species,tipo1,tipo2,category,height,weight,description,ability) VALUES ('"
+        query="INSERT INTO pokedex (dexID,species,tipo1,tipo2,category,height,weight,description,ability) VALUES ('"
         for i,pokeData in enumerate(pokemon):
             if (i==len(pokemon)-1):
                 query+=str(pokeData)
@@ -48,7 +48,7 @@ def insert_in_db(pokemon):
         
     
     else: #1tipo
-        query="INSERT INTO test (dexID,species,tipo1,category,height,weight,description,ability) VALUES ('"
+        query="INSERT INTO pokedex (dexID,species,tipo1,category,height,weight,description,ability) VALUES ('"
         for i,pokeData in enumerate(pokemon):
             if (pokeData):
                 if (i==len(pokemon)-1):
@@ -62,13 +62,13 @@ def insert_in_db(pokemon):
 
 
 def check_all_dex():
-    query="SELECT * FROM test"
+    query="SELECT * FROM pokedex"
     cursor.execute(query)
     pokesData=cursor.fetchall()
     print(*pokesData,sep="\n")
 
 def check_dex(pokemon_name):
-    query="SELECT * FROM test WHERE species='"+pokemon_name.title()+"';"
+    query="SELECT * FROM pokedex WHERE species='"+pokemon_name.title()+"';"
     cursor.execute(query)
     pokeData=cursor.fetchone()
     print()

@@ -51,7 +51,7 @@ def getPokeData(pokemon_info,pokemon_info2):
 def insert_in_db(pokeData):
     
     if len(pokeData[2])==2:
-        query="INSERT INTO test (dexID,species,tipo1,tipo2,description,height,weight,category,ability) VALUES ('"
+        query="INSERT INTO pokedex_nacional (dexID,species,tipo1,tipo2,description,height,weight,category,ability) VALUES ('"
         for i in range(len(pokeData)-1):
             if isinstance(pokeData[i],list):
                 for j,k in enumerate (pokeData[i]):
@@ -62,7 +62,7 @@ def insert_in_db(pokeData):
         return query
     
     else:
-        query="INSERT INTO test (dexID,species,tipo1,description,height,weight,category,ability) VALUES ('"
+        query="INSERT INTO pokedex_nacional (dexID,species,tipo1,description,height,weight,category,ability) VALUES ('"
         for i in range(len(pokeData)-1):
             if isinstance(pokeData[i],list):
                 for j,k in enumerate (pokeData[i]):
