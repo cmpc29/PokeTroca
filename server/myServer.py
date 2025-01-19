@@ -54,5 +54,5 @@ def execute():
             client_thread.start()
         except socket.timeout:
             print("Tempo de espera expirado, aguardando novas conexões...")
-            break
+            
 
