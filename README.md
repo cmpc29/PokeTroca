@@ -12,6 +12,7 @@ Criar uma aplicação simples e funcional para simular um sistema de troca de Po
 
 ## Funcionalidades  
 - **Interface do usuário no terminal**: Interface simples e eficiente para capturar Pokémon e solicitar informações sobre eles do servidor.
+- **Servidor centralizado**: Pode coordenar conexões com qualquer IP e compartilhar suas informações.
 - **Robustez**: Programa preparado com mensagens de erro customizadas para lidar com diversos tipos de entradas equivocadas.
 - **Confiabilidade**: Garantia de chegada da informação entre servidor <-> cliente por meio de conexão TCP.
 - **Time Out**: Manutenção da conectividade por meio de timers. Reconecta usuários automaticamente à seção previamente expirada, dentro de uma faixa de tempo.
