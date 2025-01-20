@@ -5,7 +5,7 @@ import socket
 
 
 HOST = "25.54.201.178" #COLOQUE O IP DO SERVIDOR AQUI!!!
-PORT = 1026
+PORT = 1025
 client= socket.socket(socket.AF_INET, socket.SOCK_STREAM) #AF_INET é o protocolo de endereçamento de IP, SOCK_STREAM é o protocolo de transporte TCP!!!
 
 def execute_catch():
