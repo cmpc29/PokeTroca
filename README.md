@@ -1,4 +1,4 @@
-# PokeTroca
+# National Dex
 
 Este repositório contém o código-fonte de um sistema de redes desenvolvido em Python que utiliza sockets para permitir a troca de diferentes Pokémon entre usuários em computadores distintos conectados à mesma rede.
 
