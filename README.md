@@ -8,7 +8,7 @@ O projeto foi desenvolvido com o objetivo de aplicar conceitos de Redes de Compu
 Criar uma aplicação simples e funcional para simular um sistema de troca de Pokémon, em que:
 1. Os treinadores podem conectar seus computadores a um servidor central na mesma rede.
 2. Cada treinador pode capturar um pokémon e solicitar informações sobre ele do servidor externo.
-3. A troca ocorre de maneira segura e sincronizada, utilizando comunicação TCP e sockets para transmissão de dados.
+3. A troca de informações ocorre de maneira confiável, utilizando comunicação TCP e sockets para transmissão de dados.
 
 ## Funcionalidades  
 - **Interface do usuário no terminal**: Interface simples e eficiente para capturar Pokémon e solicitar informações sobre eles do servidor.
